@@ -1,9 +1,19 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     const getStartedBtn = document.getElementById('getStarted');
+    const loginBtn = document.getElementById('loginBtn');
+    const signupBtn = document.getElementById('signupBtn');
     const authSection = document.getElementById('authSection');
 
     getStartedBtn.addEventListener('click', () => {
+        authSection.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    loginBtn.addEventListener('click', () => {
+        authSection.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    signupBtn.addEventListener('click', () => {
         authSection.scrollIntoView({ behavior: 'smooth' });
     });
 
@@ -12,10 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(data => {
             if (data.message) {
-                document.getElementById('loginBtn').style.display = 'none';
-                document.getElementById('authSection').innerHTML = `
-                    <h3>Welcome back!</h3>
-                    <p>${data.message}</p>
+                loginBtn.style.display = 'none';
+                signupBtn.style.display = 'none';
+                authSection.innerHTML = `
+                    <h3>Welcome to Your Dashboard</h3>
+                    <p>Start monitoring speeds now!</p>
+                    <button class="button-primary">Launch App</button>
                 `;
             }
         })
