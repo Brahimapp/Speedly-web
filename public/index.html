@@ -4,15 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web App</title>
+    <title>WebApp - Your Modern Solution</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to My Web App</h1>
-        <p id="message">Loading...</p>
-        <button id="refreshBtn" class="button">Refresh Message</button>
-    </div>
+    <nav class="navbar">
+        <div class="logo">WebApp</div>
+        <div class="nav-buttons">
+            <button id="loginBtn" class="button-secondary">Login</button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Transform Your Ideas Into Reality</h1>
+            <p>Experience the next generation of web applications with our powerful platform</p>
+            <button id="getStarted" class="button-primary">Get Started</button>
+        </div>
+    </header>
+
+    <section class="features">
+        <h2>Why Choose Us?</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <i class="fas fa-bolt"></i>
+                <h3>Lightning Fast</h3>
+                <p>Experience blazing-fast performance with our optimized infrastructure</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Secure</h3>
+                <p>Your data is protected with enterprise-grade security</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-code"></i>
+                <h3>Developer Friendly</h3>
+                <p>Built by developers, for developers</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="cta-content">
+            <h2>Ready to Get Started?</h2>
+            <p>Join thousands of users who trust our platform</p>
+            <div id="authSection">
+                <script authed="location.reload()" src="https://auth.util.repl.co/script.js"></script>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 WebApp. All rights reserved.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
